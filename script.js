@@ -103,4 +103,40 @@ function loadingAnimation() {
     })
 }
 loadingAnimation()
+function productAnimation () {
+    gsap.from(".box", {
+        // delay:6,
+        y:300,
+        opacity:0,
+        stagger:1.3,
+        duration:1,
+        scrollTrigger: {
+            trigger:"#page3",
+            scroller:".main",
+            // markers:true,
+            start: "top 60%",
+            end:"top 0",
+            scrub:3
+        }
+    })
+}
+productAnimation()
 
+
+function footerAnimation() {
+    gsap.from(".footer", {
+        y:-80,
+        opacity:0,
+        duration:0.7,
+        scrollTrigger:{
+            trigger:"#page5",
+            scroller:".main",
+            // markers:true,
+            start:"top 70%",
+            scrub:4,
+            end:"top 70%"
+        },
+        stagger:0.8
+    })
+}
+footerAnimation()
