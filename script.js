@@ -140,3 +140,7 @@ function footerAnimation() {
     })
 }
 footerAnimation()
+ScrollTrigger.config({ refreshPriority: 1 });
+window.addEventListener("resize", () => {
+    ScrollTrigger.refresh();
+});
